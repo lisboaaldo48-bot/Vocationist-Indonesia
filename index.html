@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Vocationist Indonesia</title>
+
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: #f4f6f9;
+}
+
+header {
+background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)),
+url('https://images.unsplash.com/photo-1507692049790-de58290a4334');
+background-size: cover;
+color: white;
+text-align: center;
+padding: 80px 20px;
+}
+
+nav {
+background: #0d1b2a;
+padding: 12px;
+text-align: center;
+}
+
+nav a {
+color: white;
+margin: 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+section {
+max-width: 1000px;
+margin: auto;
+padding: 30px 20px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+
+.card {
+background: white;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.card-content {
+padding: 15px;
+}
+
+.founder {
+text-align: center;
+}
+
+.founder img {
+width: 200px;
+border-radius: 50%;
+margin-top: 20px;
+}
+
+/* FORM */
+input, textarea {
+width: 100%;
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #ccc;
+}
+
+button {
+background-color: #1e3a5f;
+color: white;
+padding: 10px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+
+/* WHATSAPP BUTTON */
+.wa-container {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #25D366;
+color: white;
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 10px 15px;
+border-radius: 30px;
+text-decoration: none;
+font-size: 14px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.wa-icon {
+width: 22px;
+height: 22px;
+}
+
+footer {
+background: #0d1b2a;
+color: white;
+text-align: center;
+padding: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Vocationist Indonesia</h1>
+<p>Melayani Panggilan, Membentuk Imam</p>
+</header>
+
+<nav>
+<a href="#">Beranda</a>
+<a href="#">Panggilan</a>
+<a href="#">Kontak</a>
+</nav>
+
+<section>
+<h2>Selamat Datang</h2>
+<p>Kami melayani panggilan hidup imamat dan religius di Indonesia.</p>
+
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
+<div class="card-content">
+<h3>Misi</h3>
+<p>Membina calon imam dan melayani Gereja.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="founder">
+<h2>Pendiri</h2>
+<p>St. Justinus Maria Russolillo</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Giustino_Russolillo.jpg">
+</section>
+
+<section>
+<h2>Form Pendaftaran</h2>
+
+<div class="card">
+<form onsubmit="kirimForm(event)">
+<input type="text" id="nama" placeholder="Nama" required><br><br>
+<input type="number" id="umur" placeholder="Umur" required><br><br>
+<input type="text" id="alamat" placeholder="Alamat" required><br><br>
+<input type="text" id="wa" placeholder="No WhatsApp" required><br><br>
+<textarea id="motivasi" placeholder="Motivasi" required></textarea><br><br>
+<button type="submit">Kirim</button>
+</form>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Vocationist Indonesia</p>
+</footer>
+
+<!-- WA BUTTON -->
+<a href="https://wa.me/6281234567890?text=Halo Pater, saya tertarik menjadi calon imam Vocationist" target="_blank" class="wa-container">
+<span>Hubungi Kami</span>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon">
+</a>
+
+<script>
+function kirimForm(event) {
+event.preventDefault();
+
+let nama = document.getElementById("nama").value;
+let umur = document.getElementById("umur").value;
+let alamat = document.getElementById("alamat").value;
+let wa = document.getElementById("wa").value;
+let motivasi = document.getElementById("motivasi").value;
+
+let nomorAdmin = "081339867238"; // GANTI
+
+let pesan = `Pendaftaran Calon Imam:%0A
+Nama: ${nama}%0A
+Umur: ${umur}%0A
+Alamat: ${alamat}%0A
+WA: ${wa}%0A
+Motivasi: ${motivasi}`;
+
+window.open(`https://wa.me/${nomorAdmin}?text=${pesan}`);
+}
+</script>
+
+</body>
+</html>
