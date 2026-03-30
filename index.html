@@ -2,17 +2,17 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Vocationist Indonesia</title>
+<title>Abdi-Abdi Sakramen Mahakudus</title>
 
 <style>
 body {
 margin: 0;
 font-family: 'Segoe UI', sans-serif;
-background: #f4f6f9;
+background: #fdf6f6;
 }
 
 header {
-background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)),
+background: linear-gradient(rgba(150,0,60,0.7), rgba(150,0,60,0.7)),
 url('https://images.unsplash.com/photo-1507692049790-de58290a4334');
 background-size: cover;
 color: white;
@@ -21,7 +21,7 @@ padding: 80px 20px;
 }
 
 nav {
-background: #0d1b2a;
+background: #8b1c4a;
 padding: 12px;
 text-align: center;
 }
@@ -39,37 +39,20 @@ margin: auto;
 padding: 30px 20px;
 }
 
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-}
-
 .card {
 background: white;
 border-radius: 15px;
-overflow: hidden;
+padding: 20px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.card img {
+/* FOTO */
+.img-center {
 width: 100%;
-height: 200px;
-object-fit: cover;
-}
-
-.card-content {
-padding: 15px;
-}
-
-.founder {
-text-align: center;
-}
-
-.founder img {
-width: 200px;
-border-radius: 50%;
-margin-top: 20px;
+max-width: 300px;
+border-radius: 15px;
+display: block;
+margin: 20px auto;
 }
 
 /* FORM */
@@ -78,10 +61,11 @@ width: 100%;
 padding: 10px;
 border-radius: 8px;
 border: 1px solid #ccc;
+margin-bottom: 10px;
 }
 
 button {
-background-color: #1e3a5f;
+background-color: #8b1c4a;
 color: white;
 padding: 10px;
 border: none;
@@ -89,7 +73,7 @@ border-radius: 8px;
 cursor: pointer;
 }
 
-/* WHATSAPP BUTTON */
+/* WA BUTTON */
 .wa-container {
 position: fixed;
 bottom: 20px;
@@ -103,79 +87,103 @@ padding: 10px 15px;
 border-radius: 30px;
 text-decoration: none;
 font-size: 14px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .wa-icon {
 width: 22px;
-height: 22px;
 }
 
 footer {
-background: #0d1b2a;
+background: #8b1c4a;
 color: white;
 text-align: center;
 padding: 15px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>Vocationist Indonesia</h1>
-<p>Melayani Panggilan, Membentuk Imam</p>
+<h1>Misionárius Abdi-Abdi Sakramentu Mahakdús</h1>
+<p>Ancelle Missionarie del Santissimo Sacramento</p>
 </header>
 
 <nav>
 <a href="#">Beranda</a>
+<a href="#">Tentang</a>
 <a href="#">Panggilan</a>
 <a href="#">Kontak</a>
 </nav>
 
 <section>
-<h2>Selamat Datang</h2>
-<p>Kami melayani panggilan hidup imamat dan religius di Indonesia.</p>
+<h2>Spiritualitas</h2>
+<p><b>Ekaristia Misionária</b></p>
+<p>“Deit iha Ekaristia mak ita bele hetan forsa atu sai testemunha ba Nia.”</p>
+</section>
 
-<div class="grid">
+<section>
+<h2>Tentang Kami</h2>
 <div class="card">
-<img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
-<div class="card-content">
-<h3>Misi</h3>
-<p>Membina calon imam dan melayani Gereja.</p>
-</div>
-</div>
+
+<!-- FOTO SUSTER -->
+<img src="msbs-suster.jpg" class="img-center">
+
+<p>
+Kongregasi Misionárius Abdi-Abdi Sakramentu Mahakudus didirikan
+oleh Mo. Caterina Zaccini. Kongregasi ini berfokus pada pelayanan
+Ekaristi dan karya misioner dalam Gereja.
+</p>
 </div>
 </section>
 
-<section class="founder">
-<h2>Pendiri</h2>
-<p>St. Justinus Maria Russolillo</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Giustino_Russolillo.jpg">
+<section>
+<h2>Panggilan</h2>
+<div class="card">
+<ul>
+<li>Ingin hidup bersama Yesus dalam Ekaristi</li>
+<li>Siap melayani Gereja sebagai misionaris</li>
+<li>Memiliki iman dan semangat pelayanan</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Komunitas Kami</h2>
+
+<!-- FOTO KOMUNITAS -->
+<img src="msbs-komunitas.jpg" class="img-center">
+
 </section>
 
 <section>
 <h2>Form Pendaftaran</h2>
-
 <div class="card">
 <form onsubmit="kirimForm(event)">
-<input type="text" id="nama" placeholder="Nama" required><br><br>
-<input type="number" id="umur" placeholder="Umur" required><br><br>
-<input type="text" id="alamat" placeholder="Alamat" required><br><br>
-<input type="text" id="wa" placeholder="No WhatsApp" required><br><br>
-<textarea id="motivasi" placeholder="Motivasi" required></textarea><br><br>
-<button type="submit">Kirim</button>
+<input type="text" id="nama" placeholder="Nama Lengkap" required>
+<input type="number" id="umur" placeholder="Umur" required>
+<input type="text" id="alamat" placeholder="Alamat" required>
+<textarea id="motivasi" placeholder="Motivasi panggilan" required></textarea>
+<button type="submit">Daftar Sekarang</button>
 </form>
 </div>
 </section>
 
+<section>
+<h2>Alamat</h2>
+<p>
+Jln. 003 Dahlia – Batu Cermin<br>
+Komodo, Manggarai Barat<br>
+Flores – Nusa Tenggara Timur
+</p>
+<p><b>HP: +62 822-4624-9890</b></p>
+</section>
+
 <footer>
-<p>© 2026 Vocationist Indonesia</p>
+<p>© 2026 Abdi-Abdi Sakramen Mahakudus</p>
 </footer>
 
-<!-- WA BUTTON -->
-<a href="https://wa.me/6281234567890?text=Halo Pater, saya tertarik menjadi calon imam Vocationist" target="_blank" class="wa-container">
+<a href="https://wa.me/6282246249890?text=Halo Suster, saya ingin informasi panggilan" target="_blank" class="wa-container">
 <span>Hubungi Kami</span>
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon">
 </a>
@@ -187,19 +195,17 @@ event.preventDefault();
 let nama = document.getElementById("nama").value;
 let umur = document.getElementById("umur").value;
 let alamat = document.getElementById("alamat").value;
-let wa = document.getElementById("wa").value;
 let motivasi = document.getElementById("motivasi").value;
 
-let nomorAdmin = "081339867238"; // GANTI
+let nomor = "6282246249890";
 
-let pesan = `Pendaftaran Calon Imam:%0A
+let pesan = `Pendaftaran Calon Suster:%0A
 Nama: ${nama}%0A
 Umur: ${umur}%0A
 Alamat: ${alamat}%0A
-WA: ${wa}%0A
 Motivasi: ${motivasi}`;
 
-window.open(`https://wa.me/${nomorAdmin}?text=${pesan}`);
+window.open(`https://wa.me/${nomor}?text=${pesan}`);
 }
 </script>
 
